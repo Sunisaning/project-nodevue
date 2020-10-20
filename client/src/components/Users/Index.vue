@@ -20,13 +20,23 @@
     </nav>
     <div class="center">
       <h2>ผู้ใช้งานทั้งหมด</h2>
-      <h4 class="text-success">จํานวนผู้ใช้งาน {{ users.length }} คน</h4>
+      <h4 class="text-success">
+        จํานวนผู้ใช้งาน {{ users.length }} คน
+
+          <button
+            class="btn btn-primary"
+            v-on:click="navigateTo('/user/create')"
+          >
+            เพิ่มผู้ดูแล
+          </button>
+
+      </h4>
       <div v-for="user in users" v-bind:key="user.id">
         <div class="row">
           <div class="col-sm-12">
             <div class="card">
               <div class="card-body">
-                <h5 class="card-title">รหัสผู้ใช้งาน : {{ user.id }} </h5>
+                <h5 class="card-title">รหัสผู้ใช้งาน : {{ user.id }}</h5>
                 <p>ชื่อ-นามสกุล : {{ user.name }} - {{ user.lastname }}</p>
                 <p>อีเมล : {{ user.email }}</p>
                 <p>รหัสผ่าน : {{ user.password }}</p>
@@ -47,7 +57,7 @@
             </div>
           </div>
         </div>
-        <br>
+        <br />
       </div>
     </div>
   </div>

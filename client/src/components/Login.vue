@@ -58,15 +58,7 @@
 
         <div class="error" v-if="error">{{ error }}</div>
       </form>
-      <p>
-        <button
-          class="btn btn-link text-muted op"
-          style="padding: 3% 30%"
-          v-on:click="navigateTo('/user/create')"
-        >
-          register
-        </button>
-      </p>
+
     </div>
   </div>
 </template>

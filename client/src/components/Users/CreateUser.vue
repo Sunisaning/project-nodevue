@@ -46,6 +46,7 @@
         </div>
       </div>
     </div>
+    <br>
   </div>
 </template>
 <script>
@@ -58,7 +59,7 @@ export default {
         lastname: "",
         email: "",
         password: "",
-        status: "member",
+        status: "admin",
       },
     };
   },
